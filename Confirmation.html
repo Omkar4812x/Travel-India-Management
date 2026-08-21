@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmation</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      text-decoration: none;
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1>Booking Confirmation</h1>
+  <div class="container">
+    <p><strong>Destination:</strong> <span id="destination"></span></p>
+    <p><strong>Departure Date:</strong> <span id="departure-date"></span></p>
+    <p><strong>Return Date:</strong> <span id="return-date"></span></p>
+    <p><strong>Number of Passengers:</strong> <span id="passengers"></span></p>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+    <p><strong>Comments/Requests:</strong> <span id="comments"></span></p>
+  </div>
+
+
+
+  <script>
+    document.getElementById('destination').textContent = localStorage.getItem('destination');
+    document.getElementById('departure-date').textContent = localStorage.getItem('departureDate');
+    document.getElementById('return-date').textContent = localStorage.getItem('returnDate') || 'N/A';
+    document.getElementById('passengers').textContent = localStorage.getItem('passengers');
+    document.getElementById('name').textContent = localStorage.getItem('name');
+    document.getElementById('email').textContent = localStorage.getItem('email');
+    document.getElementById('phone').textContent = localStorage.getItem('phone');
+    document.getElementById('comments').textContent = localStorage.getItem('comments') || 'None';
+  </script>
+</body>
+</html>

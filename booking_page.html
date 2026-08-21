@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangli Travel Booking</title>
+  <style>
+    /* Resetting default browser styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Body styles */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+
+    /* Form container styles */
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form element styles */
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input[type="date"],
+    input[type="number"],
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+    }
+
+    input[type="date"]:focus,
+    input[type="number"]:focus,
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+
+    input[type="submit"] {
+      padding: 12px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    /* Back button styles */
+    .back-btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #ccc;
+      color: #000;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #999;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sangli Travel Booking</h1>
+  <form id="booking-form">
+    <label for="destination">Destination:</label>
+    <select id="destination" name="destination">
+      <option value="agra">Agra</option>
+      <option value="goa">Goa</option>
+      <option value="jaipur">Jaipur</option>
+      <option value="manali">Manali</option>
+      <option value="mumbai">Mumbai</option>
+    </select>
+
+
+    <label for="departure-date">Departure Date:</label>
+    <input type="date" id="departure-date" name="departuredate" min="<?php echo date('Y-m-d'); ?>" required>
+
+    <label for="return-date">Return Date (if applicable):</label>
+    <input type="date" id="return-date" name="returndate" min="<?php echo date('Y-m-d'); ?>">
+
+    <label for="passengers">Number of Passengers:</label>
+    <input type="number" id="passengers" name="passengers" min="1" required>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="comments">Additional Comments or Requests:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <!-- Your JavaScript code -->
+  <script>
+    function submitForm() {
+      var destination = document.getElementById('destination').value;
+      var departureDate = document.getElementById('departure-date').value;
+      var returnDate = document.getElementById('return-date').value;
+      var passengers = document.getElementById('passengers').value;
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var phone = document.getElementById('phone').value;
+      var comments = document.getElementById('comments').value;
+
+      localStorage.setItem('destination', destination);
+      localStorage.setItem('departureDate', departureDate);
+      localStorage.setItem('returnDate', returnDate);
+      localStorage.setItem('passengers', passengers);
+      localStorage.setItem('name', name);
+      localStorage.setItem('email', email);
+      localStorage.setItem('phone', phone);
+      localStorage.setItem('comments', comments);
+
+      // Redirect to confirmation page
+      window.location.href = 'confirmation.html';
+    }
+
+    document.getElementById('booking-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      submitForm(); // Call the function to handle form submission
+    });
+  </script>
+</body>
+</html>
