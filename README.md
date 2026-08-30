@@ -1,22 +1,55 @@
-# Travel India Management
+# 🧳 TravelIndia - Indian Tourism & Travel Management Platform
 
-## 📌 Description
-Welcome to **Travel India Management**! This project is part of the curated software workspace.
+> **Comprehensive Indian tourism portal featuring parallax scroll hero animation, curated holiday packages, photo slideshow galleries, and online booking workflows.**
+
+---
+
+## ✨ Key Features
+
+- 🌲 **Parallax Layered Scroll Hero**
+  - Dynamic multi-layered parallax scrolling hero section featuring nature, forest, rock, and flying birds elements.
+
+- 🏰 **Curated Indian Tour Packages**
+  - **Agra**: 3 Days (Taj Mahal & Heritage Tour)
+  - **Goa**: 7 Days (Beach & Nightlife Tour)
+  - **Jaipur**: 4 Days (Pink City Forts Tour)
+  - **Manali**: 5 Days (Himalayan Valley Tour)
+  - **Mumbai**: 5 Days (Coastal Metropolis Tour)
+  - **Maldives Deluxe Special**: Premium island resort package.
+
+- 🖼️ **Interactive Image Slideshow & Masonry Gallery**
+  - Automatic image carousel slideshow showcasing destination landmarks (Switzerland, Santa Monica, Agra).
+  - Responsive masonry grid gallery for international & domestic travel destinations.
+
+- 📝 **Multi-Page Booking & Confirmation Workflow**
+  - Dedicated booking form (`booking_page.html`) capturing guest details, travel dates, passenger counts, and payment details.
+  - Booking confirmation receipt view (`Confirmation.html`).
+
+- 📞 **Support & Inquiry Contact Hub**
+  - Integrated contact form, 1800 toll-free customer support helpline, and company address directory.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML5, Vanilla JavaScript (ES6+), CSS3 (Parallax Scroll, Animations, CSS Grid)
+- **Assets**: High-resolution destination photography and media assets
+
+---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-Ensure you have the required runtime environment installed for this project:
-- **Node.js** (if applicable for web/frontend components)
-- **Python 3.10+** (if applicable for AI/voice scripts)
-- **Java JDK 17+** (if applicable for Java applications)
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Omkar4812x/Travel-India-Management.git
+   cd Travel-India-Management
+   ```
 
-### Installation & Execution
-1. Clone this repository to your local machine.
-2. Install dependencies:
-   - For Node.js projects: `npm install`
-   - For Python projects: `pip install -r requirements.txt` (or create a venv: `python -m venv venv`)
-3. Launch the application entry point.
+2. **Launch Application**:
+   Simply open `Index.html` in any modern web browser or serve via Live Server.
 
-## 📄 License & Attribution
-Created and maintained as part of the Tech Hub projects collection.
+---
+
+## 📄 License
+
+Distributed under the MIT License.
